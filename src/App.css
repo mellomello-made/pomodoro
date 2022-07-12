@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Concert One", cursive, sans-serif;
+}
+
+:root {
+  --white-index-color: rgba(255, 255, 255, 0.2);
+  --black-index-color: rgba(0, 0, 0, 0.2);
+  --main-red-color: #d8554f;
+  --main-green-color: #4c9095;
+  --main-blue-color: #447ca2;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.app-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app-wrapper.red {
+  background-color: var(--main-red-color);
+  transition: 0.3s ease-in;
+}
+
+.app-wrapper.green {
+  background-color: var(--main-green-color);
+  transition: 0.3s ease-in;
+}
+
+.app-wrapper.blue {
+  background-color: var(--main-blue-color);
+  transition: 0.3s ease-in;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+.header-wrapper {
+  width: 650px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #c24c47;
+}
+
+.header-nav__list {
+  display: flex;
+}
+
+.header-nav__btn {
+  font-size: 13px;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 3px;
+  background-color: var(--white-index-color);
+  color: white;
+}
+
+.maintime {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+  background-color: var(--white-index-color);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.maintime-option__btn {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.maintime-option__btn.focus {
+  background-color: var(--black-index-color);
+}
+
+.maintime-option__btn:nth-of-type(2) {
+  margin: 0 10px;
+}
+
+.maintime-stopwatch {
+  font-size: 120px;
+  margin-bottom: 20px;
+}
+
+.maintime-start__btn {
+  font-size: 22px;
+  width: 200px;
+  height: 50px;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 4px;
+  color: var(--main-red-color);
+  box-shadow: rgb(235 235 235) 0px 6px 0px;
+}
+
+.maintime-start__btn.start {
+  box-shadow: none;
+  transform: translateY(6px);
+  transition: 0.05s ease-in-out 0s;
+}
+
+.tasks-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+}
+
+.tasks-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 22px;
+  padding: 12px 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+  margin-bottom: 15px;
+}
+
+.tasks-menu__btn {
+  font-size: 20px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  background-color: var(--white-index-color);
+}
+
+.tasks-list {
+  width: 100%;
+}
+
+.tasks-add_btn {
+  width: 100%;
+  height: 60px;
+  font-size: 17px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+.tasks-add_btn:hover {
+  opacity: 0.8;
+}
+
+.addnote-inner {
+  padding: 25px 14px;
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  background-color: white;
+  color: rgb(85, 85, 85);
+  border-radius: 8px 8px 0 0;
+}
+
+.addnote-input__title {
+  font-size: 22px;
+  color: rgb(85, 85, 85);
+  margin-bottom: 20px;
+}
+
+.addnote-text {
+  color: rgba(239, 239, 239);
+  margin-bottom: 10px;
+}
+
+.addnote-input__cycle {
+  width: 75px;
+  font-size: 19px;
+  padding: 10px;
+  color: black;
+  background-color: rgba(239, 239, 239);
+  border-radius: 2px;
+  margin-right: 16px;
+}
+
+.addnote-cycle__btn {
+  color: gray;
+  font-size: 20px;
+  padding: 8px 12px;
+  border: 1px solid rgb(85, 85, 85);
+  border-radius: 5px;
+  box-shadow: rgba(0 0 0 / 20%) 0px 2px 2px;
+  margin-right: 6px;
+}
+
+.addnote-setting__btn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 14px 20px;
+  background-color: rgba(239, 239, 239);
+  border-radius: 0 0 8px 8px;
+}
+
+.addnote-btn__save {
+  padding: 8px 12px;
+  background: rgb(85, 85, 85);
+  border: 2px solid rgb(85, 85, 85);
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.addnote-btn__cancle {
+  padding: 8px 12px;
+  font-size: 16px;
+  background: #b2b2b2;
+}
+
+.taskitem-wrapper {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.taskitem-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: rgb(85, 85, 85);
+  background-color: white;
+  padding: 18px 14px 18px 14px;
+  border-radius: 0px 8px 8px 0px;
+}
+
+.inti {
+  color: rgb(85, 85, 85);
+  border: 1px solid rgb(235 235 235);
+}
+
+.taskitem-title {
+  color: rgb(85, 85, 85);
+  font-size: 20px;
+}
+
+.taskitem-cycle__front {
+  color: rgb(187, 187, 187);
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.taskitem-cycle__back {
+  color: rgb(187, 187, 187);
+  font-size: 17px;
+}
+
+.taskitem-side {
+  width: 6px;
+  background-color: blue;
+  border-radius: 8px 0 0 8px;
+}
